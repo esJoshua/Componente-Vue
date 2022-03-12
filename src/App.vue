@@ -1,5 +1,5 @@
 <template>
-  <!-- METODO 1
+  <!-- METODO 1 el que hice primero :(
     <div id="containerBody">
     <CharacterTemplate :dataCharacter="dataCharacterFull" />
   </div> -->
