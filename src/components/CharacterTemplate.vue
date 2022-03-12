@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <div class="row">
+    <!-- METODO 1
+      <div class="row">
       <div
         class="col-12 d-flex flex-row align-items-center"
         v-for="(character, i) in dataCharacter"
@@ -9,6 +10,11 @@
         <img :src="character.src" :alt="character.nombre" />
         <p>{{ character.nombre }}</p>
       </div>
+    </div> -->
+    <!-- METODO 2 -->
+    <div class="col-12 d-flex flex-row align-items-center">
+      <img :src="dataCharacter.src" :alt="dataCharacter.nombre" />
+      <p>{{ dataCharacter.nombre }}</p>
     </div>
   </div>
 </template>
@@ -17,8 +23,14 @@
 export default {
   name: "CharacterTemplate",
   props: {
-    dataCharacter: {
+    /*METODO 1
+     dataCharacter: {
       type: Array,
+      default: () => [],
+    }, */
+    /* METODO 2 */
+    dataCharacter: {
+      type: Object,
       default: () => {},
     },
   },

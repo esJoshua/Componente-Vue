@@ -1,6 +1,16 @@
 <template>
-  <div id="containerBody">
+  <!-- METODO 1
+    <div id="containerBody">
     <CharacterTemplate :dataCharacter="dataCharacterFull" />
+  </div> -->
+
+  <!-- METODO 2 -->
+  <div id="containerBody">
+    <CharacterTemplate
+      v-for="(character, i) in dataCharacterFull"
+      :key="i"
+      :dataCharacter="character"
+    />
   </div>
 </template>
 
